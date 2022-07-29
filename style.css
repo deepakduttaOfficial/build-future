@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --defaultPadding: 15px 60px;
+}
+
+.container {
+  height: 100vh;
+}
+.logo {
+  height: 30px;
+  margin-right: 35px;
+}
+
+.navbar {
+  background: #000000;
+  display: flex;
+  flex-direction: row;
+  color: aliceblue;
+  padding: var(--defaultPadding);
+  align-items: center;
+  position: relative;
+}
+
+.line {
+  height: 55px;
+  margin: 0 40px;
+  width: 0;
+  border: 0.9px solid #666666;
+  background-color: #666666;
+}
+
+.grow-list {
+  flex-grow: 1;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.list > li:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  background: url("./assets/downarrow.png");
+  height: 25px;
+  width: 25px;
+  background-size: 16px;
+  top: 4px;
+  background-repeat: no-repeat;
+  left: 71px;
+}
+
+.list-item {
+  list-style: none;
+  margin: 0px 25px;
+  font-weight: 400;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: Montserrat, sans-serif;
+}
+
+.button-small {
+  background-color: #ba0bc5;
+  padding: 10px 20px;
+  border-radius: 9px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  border: none;
+}
+
+/* <!-- Hero Section --> */
+
+.hero {
+  background: url("./assets/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 160px;
+}
+
+.hero-heading {
+  color: #ffffff;
+  font-family: Montserrat, sans-serif;
+  font-size: 73px;
+  padding: 0 120px;
+  text-align: center;
+}
+.hero-description {
+  color: #ffffff;
+  font-family: Montserrat, sans-serif;
+  font-size: 26px;
+  margin-top: 10px;
+}
+
+.button-large {
+  background-color: #ba0bc5;
+  padding: 16px 30px;
+  border-radius: 9px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  border: none;
+  font-size: 23px;
+  margin-top: 62px;
+}
+
+/* Extra feture --------- */
+
+.list-item:hover {
+  color: #bababa;
+}
+
+.button-small:hover {
+  background-color: #ab0eb5;
+}
+
+.button-large:hover {
+  background-color: #ab0eb5;
+}
